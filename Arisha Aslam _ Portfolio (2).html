@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arisha Aslam | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#000;--text:#fff;--muted:#9a9a9a;--accent:#ffbd39;--track:#1c1c1c}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);background:#000}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,sans-serif;line-height:1.9;overflow-x:hidden}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:16px 6%;gap:16px}
+.logo{font-weight:800;font-size:1.5rem;text-decoration:none;color:var(--text)}
+nav{display:flex;gap:22px;overflow-x:auto}
+nav a{color:var(--text);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap;transition:.3s}
+nav a:hover{color:var(--accent)}
+section{padding:70px 6%;max-width:1000px;margin:auto}
+.title{position:relative;font-size:clamp(2.2rem,8vw,3.2rem);font-weight:800;line-height:1.2;margin-bottom:34px}
+.title::before{content:attr(data-bg);position:absolute;left:0;top:-14px;font-size:1.6em;color:rgba(255,255,255,.05);z-index:-1;white-space:nowrap}
+.title span{color:var(--accent)}
+.muted{color:var(--muted);font-size:1.05rem}
+/* Hero */
+#home{min-height:85vh;display:flex;flex-wrap:wrap;align-items:center;gap:40px}
+.avatar{width:200px;height:200px;border-radius:50%;border:4px solid var(--accent);display:grid;place-items:center;font-size:4rem;font-weight:800;color:var(--accent);background:#111;flex-shrink:0}
+.hero-text{flex:1;min-width:260px}
+.hello{color:var(--accent);font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:.85rem}
+h1{font-size:clamp(2.4rem,9vw,4rem);font-weight:800;line-height:1.15;margin:6px 0}
+.role{font-size:1.2rem;font-weight:500;margin-bottom:12px}
+.btn{display:inline-block;padding:16px 34px;border-radius:50px;background:var(--accent);color:#000;font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:.85rem;text-decoration:none;transition:.3s;margin:10px 10px 0 0;border:2px solid var(--accent)}
+.btn.o{background:transparent;color:var(--text)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(255,189,57,.35)}
+/* Profile table */
+.info{display:grid;grid-template-columns:140px 1fr;gap:14px 20px;margin-top:34px}
+.info b{font-weight:600}
+.info span{color:var(--muted);font-size:1.05rem}
+/* Skills */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.sk{position:relative;background:#0f0f0f;border:1px solid #242424;border-radius:18px;padding:22px 20px;overflow:hidden;transition:.35s}
+.sk::after{content:"";position:absolute;inset:auto -30% -60% auto;width:140px;height:140px;border-radius:50%;background:var(--c);opacity:.12;transition:.35s}
+.sk:hover{transform:translateY(-6px);border-color:var(--c)}
+.sk:hover::after{opacity:.28;transform:scale(1.3)}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;background:color-mix(in srgb,var(--c) 18%,#000);margin-bottom:14px}
+.sk h3{font-size:1.05rem;font-weight:600;line-height:1.4}
+.sk small{display:block;color:var(--c);font-weight:500;margin:2px 0 12px;font-size:.8rem;letter-spacing:1px;text-transform:uppercase}
+.dots{display:flex;gap:6px}
+.dots i{flex:1;height:6px;border-radius:6px;background:#262626}
+.dots i.on{background:var(--c)}
+/* Contact */
+.contact-row{margin-bottom:18px}
+.contact-row a.mail{color:var(--accent);font-weight:600;word-break:break-all}
+input,textarea{width:100%;padding:14px 16px;margin-bottom:14px;background:#0f0f0f;border:1px solid #2a2a2a;color:var(--text);font-family:inherit;font-size:1rem;border-radius:8px}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+button.btn{cursor:pointer;font-family:inherit}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:.9rem;border-top:1px solid #1a1a1a}
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:none}
+@media(max-width:520px){.info{grid-template-columns:1fr 1.4fr}.avatar{width:150px;height:150px;font-size:3rem}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">Arisha Aslam</a>
+  <nav><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section id="home">
+  <div class="avatar">AA</div>
+  <div class="hero-text">
+    <p class="hello">Hello, I'm</p>
+    <h1>Arisha Aslam</h1>
+    <p class="role">BS Mathematics Student | Machine Learning Enthusiast</p>
+    <p class="muted">Mathematics student at BZU with a focus on machine learning and analytical problem solving, building clear, data-driven solutions.</p>
+    <a href="#contact" class="btn">Contact Me</a><a href="#skills" class="btn o">View Skills</a>
+  </div>
+</section>
+
+<section id="about" class="fade">
+  <h2 class="title" data-bg="About">About <span>Me</span></h2>
+  <p class="muted">I'm a BS Mathematics student at BZU with a strong interest in machine learning and data-driven problem solving. I have studied Machine Learning, Python, HTML, Database Management and Git &amp; GitHub, and I enjoy breaking complex problems into simple, logical steps. With strong portfolio management skills, I keep my work organized, consistent and professionally presented.</p>
+  <div class="info">
+    <b>Name:</b><span>Arisha Aslam</span>
+    <b>Profile:</b><span>Mathematics &amp; Machine Learning</span>
+    <b>Education:</b><span>BS Mathematics, BZU</span>
+    <b>Language:</b><span>English, Urdu</span>
+    <b>Other Skills:</b><span>HTML, Python, Database Management, Git &amp; GitHub, Problem Solving, Portfolio Management</span>
+    <b>Interest:</b><span>Machine learning, solving real world problems</span>
+  </div>
+  <a class="btn" style="margin-top:34px" href="https://www.linkedin.com/in/arisha-aslam-arisha-406a393b6" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="btn o" style="margin-top:34px" href="https://github.com/arishaaslam396-prog" target="_blank" rel="noopener">GitHub</a>
+</section>
+
+<section id="skills" class="fade">
+  <h2 class="title" data-bg="Skills"><span>Skills</span></h2>
+  <div class="grid" id="skillList"></div>
+</section>
+
+<section id="contact" class="fade">
+  <h2 class="title" data-bg="Contact">Get In <span>Touch</span></h2>
+  <p class="contact-row muted">Email: <a class="mail" href="mailto:arishaaslam396@gmail.com">arishaaslam396@gmail.com</a></p>
+  <input id="n" placeholder="Your name">
+  <input id="e" type="email" placeholder="Your email">
+  <textarea id="m" rows="5" placeholder="Your message"></textarea>
+  <button class="btn" id="send">Send Message</button>
+</section>
+
+<footer>© 2026 Arisha Aslam</footer>
+
+<script>
+// Edit skills here: [icon, name, level label, dots out of 5, color]
+const skills=[["🤖","Machine Learning","Learning","4","#ffbd39"],["🐍","Python","Strong","4","#38bdf8"],["🌐","HTML","Strong","4","#fb7185"],["🗄️","Database Management","Strong","4","#a78bfa"],["🔀","Git & GitHub","Strong","4","#34d399"],["🧩","Problem Solving","Excellent","5","#fb923c"],["📂","Portfolio Management","Excellent","5","#f472b6"]];
+document.getElementById('skillList').innerHTML=skills.map(s=>`<div class="sk" style="--c:${s[4]}"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><small>${s[2]}</small><div class="dots">${[1,2,3,4,5].map(n=>`<i class="${n<=s[3]?'on':''}"></i>`).join('')}</div></div>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');x.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%')}}),{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+document.getElementById('send').onclick=()=>{
+  const n=document.getElementById('n').value,e=document.getElementById('e').value,m=document.getElementById('m').value;
+  location.href='mailto:arishaaslam396@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+e+')');
+};
+</script>
+</body>
+</html>
